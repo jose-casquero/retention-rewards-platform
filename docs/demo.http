@@ -1,0 +1,26 @@
+### Create player
+POST http://localhost:8081/api/v1/players
+Content-Type: application/json
+
+{
+  "email": "player@example.com",
+  "country": "PL",
+  "preferredChannel": "PUSH",
+  "marketingOptIn": true
+}
+
+### Record deposit activity
+POST http://localhost:8081/api/v1/players/{{playerId}}/activity
+Content-Type: application/json
+
+{
+  "activityType": "DEPOSIT",
+  "amount": 50.00,
+  "occurredAt": "2026-01-01T12:00:00Z"
+}
+
+### Check loyalty account
+GET http://localhost:8082/api/v1/rewards/players/{{playerId}}/account
+
+### List communications
+GET http://localhost:8084/api/v1/communications/deliveries

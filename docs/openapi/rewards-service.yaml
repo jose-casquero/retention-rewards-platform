@@ -1,0 +1,16 @@
+openapi: 3.0.3
+info:
+  title: Rewards Service API
+  version: 1.0.0
+paths:
+  /api/v1/rewards/players/{playerId}/account:
+    get:
+      summary: Get loyalty account
+  /api/v1/rewards/catalog:
+    get:
+      summary: List rewards
+    post:
+      summary: Create reward
+  /api/v1/rewards/players/{playerId}/claim:
+    post:
+      summary: Claim reward
